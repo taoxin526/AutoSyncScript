@@ -1,14 +1,14 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 「京东」NobyDa签到
+name: 「京豆」变动通知
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 8 * * *'
+    - cron: '1 18 * * *'
   repository_dispatch:
-    types: JD_DailyBonus.js
+    types: JD-DailyBonus
 jobs:
   build:
 
@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          repository: taoxin526/AutoSyncScript/NobyDa/JD-DailyBonus
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -33,9 +31,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 「京东」NobyDa签到'
+      - name: '运行 「京豆」变动通知'
         run: |
-          node JD_DailyBonus.js
+          node NobyDa/JD-DailyBonus/JD_DailyBonus.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}

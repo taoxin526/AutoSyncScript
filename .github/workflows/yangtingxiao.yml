@@ -1,4 +1,4 @@
-name: NobyDa-sync
+name: yangtingxiao-sync
 on:
   schedule:
     - cron: '6 */3 * * *'

@@ -1,0 +1,7 @@
+
+[Script]
+cron "15,30,45 0-23 * * *" script-path=https://raw.githubusercontent.com/taoxin526/AutoSyncScript/Sunertnew/Task/youth.js, timeout=180, enabled=true, tag=中青看点
+
+cron "23 6,13 * * *" script-path=https://raw.githubusercontent.com/taoxin526/AutoSyncScript/Sunertnew/Task/youth_banner.js, timeout=1800, enabled=true, tag=中青看点看看赚
+
+cron "*/27 0-59 0-6 * * *" script-path=https://raw.githubusercontent.com/taoxin526/AutoSyncScript/Sunertnew/Task/zqread.js, timeout=3600, enabled=true, tag=中青看点阅读

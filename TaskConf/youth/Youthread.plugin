@@ -1,7 +1,3 @@
-[MITM]
-hostname = ios.baertt.com,kd.youth.cn,kandian.wkandian.com
-
-
 [Script]
 cron "17,37,57 0-23 * * *" script-path=https://raw.githubusercontent.com/taoxin526/AutoSyncScript/Sunertnew/Task/youth.js, timeout=180, enabled=true, tag=中青看点
 
@@ -9,6 +5,3 @@ cron "23 6,13 * * *" script-path=https://raw.githubusercontent.com/taoxin526/Aut
 
 cron "*/27 0-59 0-6 * * *" script-path=https://raw.githubusercontent.com/taoxin526/AutoSyncScript/Sunertnew/Task/zqread.js, timeout=3600, enabled=true, tag=中青看点阅读
 
-http-request ^https?://ios\.baertt\.com\/v5\/task/browse_start\.json script-path=https://raw.githubusercontent.com/taoxin526/AutoSyncScript/Sunertnew/Task/youth_banner.js, requires-body=true, timeout=10, tag=中青浏览赚
-
-http-request ^https?://ios\.baertt\.com/v5/Nameless/adlickstart\.json script-path=https://raw.githubusercontent.com/taoxin526/AutoSyncScript/Sunertnew/Task/youth_banner.js, requires-body=true, timeout=10, tag=中青看看赚
